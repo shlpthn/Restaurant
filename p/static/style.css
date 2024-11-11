@@ -1,0 +1,56 @@
+/* Basic styling for layout */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+h1, h2, h3 {
+    margin-top: 0;
+    color: #333;
+}
+h4{
+    font-size: 40px;
+    text-align: center;
+}
+.category, .order-item {
+    margin-bottom: 30px;
+}
+
+.menu-item, .order-item {
+    background-color: white;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.price {
+    color: #666;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.order-items {
+    margin-top: 20px;
+}

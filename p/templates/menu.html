@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Menu</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h4>Los Pollos Hermanos</h4>
+        <h1>Restaurant Menu</h1>
+        
+        <form action="/order" method="post">
+            {% for category, items in menu_data.items() %}
+                <div class="category">
+                    <h2>{{ category }}</h2>
+                    <div class="menu">
+                        {% for item in items %}
+                            <div class="menu-item">
+                                <h3>{{ item.name }}</h3>
+                                <p>{{ item.description }}</p>
+                                <p class="price">Price: ₹{{ item.price }}</p>
+                                <label for="quantity-{{ item.name }}">Quantity:</label>
+                                <input type="number" id="quantity-{{ item.name }}" name="{{ item.name }}" value="0" min="0">
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            {% endfor %}
+            
+            <button type="submit">Place Order</button>
+        </form>
+    </div>
+</body>
+</html>
